@@ -38,7 +38,6 @@ export default function Header() {
     { href: "/chi-siamo", label: t("chiSiamo") },
     { href: "/elettricisti", label: t("elettricisti") },
     { href: "/carpentieri", label: t("carpentieri") },
-    { href: "/tubisti", label: t("tubisti") },
   ];
 
   const useDarkText = scrolled || menuOpen;
@@ -54,7 +53,7 @@ export default function Header() {
         <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 z-50">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="5H — Cinque H"
               width={44}
               height={44}

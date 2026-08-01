@@ -44,12 +44,13 @@ export default function Footer() {
         key={pulseKey}
         className="footer-pulse pointer-events-none absolute inset-0"
       />
-      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3">
+      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 pointer-events-none">
+
         <p className="max-md:hidden text-7xl lg:text-[11rem] text-paper/3 font-display">CINQUE H</p>
       </div>
       <div className="mx-auto max-w-6xl px-6 py-16 grid gap-12 md:grid-cols-3 z-10">
         <div>
-          <Image src="/logo.jpeg" alt="5H — Cinque H" width={48} height={48} />
+          <Image src="/logo.png" alt="5H — Cinque H" width={48} height={48} />
           <p className="mt-4 text-sm text-paper/70 max-w-xs">
             Elettricisti, carpentieri e tubisti per il settore civile, navale e
             industriale.
@@ -72,9 +73,6 @@ export default function Footer() {
               className="hover:text-gold transition-colors"
             >
               {t("carpentieri")}
-            </Link>
-            <Link href="/tubisti" className="hover:text-gold transition-colors">
-              {t("tubisti")}
             </Link>
           </nav>
         </div>
