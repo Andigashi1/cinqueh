@@ -87,7 +87,6 @@ function ServicesSection({ t }: { t: ReturnType<typeof useTranslations> }) {
       title: "Carpentieri",
       desc: t("serviceCarpentieri"),
     },
-    { href: "/tubisti", title: "Tubisti", desc: t("serviceTubisti") },
   ];
 
   return (
