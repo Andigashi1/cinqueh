@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Color tokens — derived from the 5H logo */
+  --color-ink: #14171A;
+  --color-gold: #A9812E;
+  --color-gold-light: #C9A85C;
+  --color-paper: #FAF9F6;
+  --color-slate: #2E3A44;
+  --color-hairline: #E3DFD6;
+
+  /* Fonts */
+  --font-display: var(--font-fraunces), serif;
+  --font-body: "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Signature element: the split gold/black divider from the logo */
+.brand-divider {
+  display: flex;
+  height: 3px;
+  width: 72px;
+}
+.brand-divider span:first-child {
+  background: var(--color-ink);
+  width: 50%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+.brand-divider span:last-child {
+  background: var(--color-gold);
+  width: 50%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease 0.2s;
+}
+.brand-divider.in-view span {
+  transform: scaleX(1);
+}
+
+@keyframes footer-pulse {
+  0% { opacity: 0; }
+  35% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+.footer-pulse {
+  background-color: var(--color-slate);
+  opacity: 0;
+  animation: footer-pulse 0.8s ease-out;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-divider span,
+  .reveal,
+  .footer-pulse {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

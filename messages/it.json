@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Home",
+    "chiSiamo": "Chi Siamo",
+    "elettricisti": "Elettricisti",
+    "carpentieri": "Carpentieri",
+    "tubisti": "Tubisti",
+    "contatti": "Contatti"
+  },
+  "home": {
+    "heroEyebrow": "Elettricisti · Carpentieri · Tubisti",
+    "heroTitle": "Interventi tecnici per il settore civile, navale e industriale",
+    "heroSubtitle": "5H segue impianti elettrici, lavori di carpenteria e tubisteria per abitazioni, cantieri navali e stabilimenti industriali a Venezia e provincia.",
+    "heroCta": "Richiedi un preventivo",
+    "trustLine": "Interventi elettrici, di carpenteria e tubisteria su navi da crociera e imbarcazioni presso i principali cantieri navali di Venezia.",
+    "servicesTitle": "I nostri servizi",
+    "servicesSubtitle": "Tre competenze, un solo interlocutore.",
+    "serviceElettricisti": "Impianti elettrici civili, industriali e navali: installazione, manutenzione e messa a norma.",
+    "serviceCarpentieri": "Lavori di carpenteria per allestimenti navali, industriali e civili.",
+    "serviceTubisti": "Realizzazione e manutenzione di linee tubiere per impianti navali e industriali.",
+    "sectorsTitle": "Settori serviti",
+    "sectorCivile": "Civile",
+    "sectorNavale": "Navale",
+    "sectorIndustriale": "Industriale",
+    "aboutTeaser": "Un team di professionisti specializzati in interventi elettrici, di carpenteria e tubisteria per il settore civile, navale e industriale.",
+    "aboutCta": "Scopri chi siamo",
+    "contactTitle": "Parliamo del tuo progetto",
+    "contactSubtitle": "Contattaci per un sopralluogo o un preventivo.",
+    "contactCta": "Contattaci"
+  },
+  "chiSiamo": {
+    "eyebrow": "Chi Siamo",
+    "title": "Un team con esperienza reale",
+    "leadText": "5H nasce dall'esperienza diretta nel settore navale e industriale, maturata nel tempo attraverso il lavoro nei principali cantieri della zona. Oggi costruiamo un team di professionisti che condivide lo stesso standard: competenza tecnica e attenzione a ogni intervento, che si tratti di un'abitazione, un cantiere navale o uno stabilimento industriale.",
+    "valuesTitle": "Come lavoriamo",
+    "values": [
+      {
+        "title": "Competenza",
+        "desc": "Ogni intervento è seguito da professionisti con esperienza specifica nel settore."
+      },
+      {
+        "title": "Versatilità",
+        "desc": "Lavoriamo nel settore civile, navale e industriale, senza compromessi sulla qualità."
+      },
+      {
+        "title": "Serietà",
+        "desc": "Rispetto dei tempi e degli accordi presi con ogni cliente."
+      }
+    ],
+    "ctaTitle": "Vuoi saperne di più sul nostro lavoro?",
+    "ctaText": "Contattaci per parlare del tuo progetto.",
+    "ctaButton": "Contattaci"
+  },
+
+  "elettricisti": {
+    "eyebrow": "Servizi",
+    "title": "Elettricisti",
+    "subtitle": "Impianti elettrici civili, industriali e navali: dal cablaggio ai quadri elettrici, ovunque ce ne sia bisogno.",
+    "leadTitle": "Un intervento elettrico, senza limiti di settore",
+    "leadText": "Ci occupiamo di impianti elettrici in abitazioni, cantieri navali e stabilimenti industriali. Che si tratti di un nuovo impianto, di un quadro elettrico da aggiornare o di manutenzione ordinaria, seguiamo il lavoro dall'inizio alla fine.",
+    "servicesTitle": "Cosa facciamo",
+    "services": [
+      {
+        "title": "Impianti elettrici civili",
+        "desc": "Cablaggio, punti luce, prese e quadri per abitazioni e uffici."
+      },
+      {
+        "title": "Quadri elettrici",
+        "desc": "Installazione, aggiornamento e messa a norma di quadri elettrici."
+      },
+      {
+        "title": "Manutenzione",
+        "desc": "Interventi di manutenzione ordinaria e straordinaria su impianti esistenti."
+      },
+      {
+        "title": "Interventi navali e industriali",
+        "desc": "Impianti elettrici per imbarcazioni, cantieri navali e stabilimenti industriali."
+      }
+    ],
+    "sectorsTitle": "Dove operiamo",
+    "sectorsText": "Lavoriamo ovunque ci sia bisogno di un intervento elettrico: dal contesto civile a quello navale e industriale.",
+    "ctaTitle": "Hai bisogno di un elettricista?",
+    "ctaText": "Contattaci per un sopralluogo o un preventivo.",
+    "ctaButton": "Contattaci",
+    "galleryTitle": "Lavori realizzati"
+  },
+
+  "carpentieri": {
+    "eyebrow": "Servizi",
+    "title": "Carpentieri",
+    "subtitle": "Lavori di carpenteria civile, industriale e navale: allestimenti, strutture e interventi su misura.",
+    "leadTitle": "Carpenteria su misura, in ogni contesto",
+    "leadText": "Realizziamo lavori di carpenteria per abitazioni, cantieri navali e stabilimenti industriali. Dagli allestimenti su misura alle strutture portanti, seguiamo ogni intervento con la stessa cura, indipendentemente dal settore.",
+    "servicesTitle": "Cosa facciamo",
+    "services": [
+      {
+        "title": "Carpenteria civile",
+        "desc": "Strutture, fissaggi e allestimenti su misura per abitazioni e uffici."
+      },
+      {
+        "title": "Carpenteria industriale",
+        "desc": "Strutture portanti, scaffalature e casse per il settore industriale."
+      },
+      {
+        "title": "Allestimenti navali",
+        "desc": "Interni, arredi e allestimenti su misura per imbarcazioni e navi da crociera."
+      },
+      {
+        "title": "Interventi su misura",
+        "desc": "Lavori di carpenteria personalizzati in base alle esigenze del cliente."
+      }
+    ],
+    "galleryTitle": "Lavori realizzati",
+    "sectorsTitle": "Dove operiamo",
+    "sectorsText": "Lavoriamo ovunque ci sia bisogno di un intervento di carpenteria: dal contesto civile a quello navale e industriale.",
+    "ctaTitle": "Hai bisogno di un carpentiere?",
+    "ctaText": "Contattaci per un sopralluogo o un preventivo.",
+    "ctaButton": "Contattaci"
+  },
+
+  "tubisti": {
+    "eyebrow": "Servizi",
+    "title": "Tubisti",
+    "subtitle": "Linee tubiere civili, industriali e navali: installazione e manutenzione ovunque ce ne sia bisogno.",
+    "leadTitle": "Tubisteria, in ogni contesto",
+    "leadText": "Ci occupiamo di linee tubiere in abitazioni, cantieri navali e stabilimenti industriali. Dall'installazione alla manutenzione, seguiamo ogni intervento con la stessa attenzione, indipendentemente dal settore.",
+    "servicesTitle": "Cosa facciamo",
+    "services": [
+      {
+        "title": "Impianti civili",
+        "desc": "Linee idrauliche e tubazioni per abitazioni e uffici."
+      },
+      {
+        "title": "Tubisteria industriale",
+        "desc": "Linee tubiere per processi e impianti industriali."
+      },
+      {
+        "title": "Tubisteria navale",
+        "desc": "Linee tubiere per imbarcazioni e navi da crociera."
+      },
+      {
+        "title": "Manutenzione",
+        "desc": "Interventi di manutenzione ordinaria e straordinaria su linee esistenti."
+      }
+    ],
+    "galleryTitle": "Lavori realizzati",
+    "sectorsTitle": "Dove operiamo",
+    "sectorsText": "Lavoriamo ovunque ci sia bisogno di un intervento di tubisteria: dal contesto civile a quello navale e industriale.",
+    "ctaTitle": "Hai bisogno di un tubista?",
+    "ctaText": "Contattaci per un sopralluogo o un preventivo.",
+    "ctaButton": "Contattaci"
+  }
+}
