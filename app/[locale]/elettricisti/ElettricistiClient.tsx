@@ -1,15 +1,13 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { useReveal } from "@/hooks/useReveal";
 import Image from "next/image";
-import ImagePlaceholder from "@/app/components/ImagePlaceholder";
 import { pulseContatti } from "@/lib/pulseContatti";
-import Image1 from "@/public/elettricisti/image1.jpeg"
-import Image2 from "@/public/elettricisti/image2.jpeg"
-import Image3 from "@/public/elettricisti/image3.jpeg"
-import Image4 from "@/public/elettricisti/image4.jpeg"
+import Image1 from "@/public/elettricisti/image1.jpeg";
+import Image2 from "@/public/elettricisti/image2.jpeg";
+import Image3 from "@/public/elettricisti/image3.jpeg";
+import Image4 from "@/public/elettricisti/image4.jpeg";
 
 type Service = { title: string; desc: string };
 
@@ -21,9 +19,13 @@ export default function ElettricistiClient() {
     <>
       {/* HERO */}
       <section className="relative bg-ink text-paper pt-40 pb-24 overflow-hidden">
-        <ImagePlaceholder
-          label="Foto in arrivo — lavoro elettrico"
-          className="absolute inset-0"
+        <Image
+          src="/elettricisti/landscape.jpg"
+          alt="Lavoro elettrico realizzato da 5H"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover"
         />
         <div className="absolute inset-0 bg-ink/70" />{" "}
         {/* overlay for text legibility */}
@@ -157,7 +159,7 @@ function WorkGallery({ title }: { title: string }) {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((n, i) => (
-            <Image src={n} alt={`${n}`} key={i}/>
+            <Image src={n} alt={`${n}`} key={i} />
           ))}
         </div>
       </div>
