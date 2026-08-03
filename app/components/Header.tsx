@@ -55,8 +55,8 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="5H — Cinque H"
-              width={44}
-              height={44}
+              width={64}
+              height={64}
               priority
             />
           </Link>

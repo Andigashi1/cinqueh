@@ -3,7 +3,8 @@
 import { useTranslations } from "next-intl";
 import { useReveal } from "@/hooks/useReveal";
 import { pulseContatti } from "@/lib/pulseContatti";
-import ImagePlaceholder from "@/app/components/ImagePlaceholder";
+import Image from "next/image";
+import Chisiamo from "@/public/chisiamo.jpg";
 
 type ValueItem = { title: string; desc: string };
 
@@ -15,9 +16,13 @@ export default function ChiSiamoClient() {
     <>
       {/* HERO */}
       <section className="relative bg-ink text-paper pt-40 pb-24 overflow-hidden">
-        <ImagePlaceholder
-          label="Foto in arrivo — il team al lavoro"
-          className="absolute inset-0"
+        <Image
+          src={Chisiamo}
+          fill
+          priority
+          sizes="100vw"
+          alt="Foto in arrivo — il team al lavoro"
+          className="absolute inset-0 object-cover"
         />
         <div className="absolute inset-0 bg-ink/70" />
 
@@ -71,7 +76,10 @@ function ValuesSection({
 }) {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section ref={ref} className="reveal bg-paper border-y border-hairline py-20">
+    <section
+      ref={ref}
+      className="reveal bg-paper border-y border-hairline py-20"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="font-display text-2xl md:text-3xl mb-12 text-center">
           {title}

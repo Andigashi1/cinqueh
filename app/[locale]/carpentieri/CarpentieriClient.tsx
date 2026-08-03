@@ -1,10 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { useReveal } from "@/hooks/useReveal";
-import ImagePlaceholder from "@/app/components/ImagePlaceholder";
+import Image from "next/image";
 import { pulseContatti } from "@/lib/pulseContatti";
+import Carpintieri1 from "@/public/carpintieri/carpintieri1.jpeg";
+import Carpintieri2 from "@/public/carpintieri/carpintieri2.jpeg";
+import Carpintieri3 from "@/public/carpintieri/carpintieri3.jpeg";
+import Carpintieri4 from "@/public/carpintieri/carpintieri4.jpg";
+import Carpintieri5 from "@/public/carpintieri/carpintieri5.jpg";
 
 type Service = { title: string; desc: string };
 
@@ -16,9 +20,13 @@ export default function CarpentieriClient() {
     <>
       {/* HERO */}
       <section className="relative bg-ink text-paper pt-40 pb-24 overflow-hidden">
-        <ImagePlaceholder
-          label="Foto in arrivo — lavoro elettrico"
-          className="absolute inset-0"
+        <Image
+          src={Carpintieri1}
+          alt="carpintieri foto"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover"
         />
         <div className="absolute inset-0 bg-ink/70" />{" "}
         {/* overlay for text legibility */}
@@ -142,7 +150,7 @@ function CtaSection({
 
 function WorkGallery({ title }: { title: string }) {
   const ref = useReveal<HTMLDivElement>();
-  const placeholders = [1, 2, 3, 4];
+  const images = [Carpintieri2, Carpintieri3, Carpintieri4, Carpintieri5];
 
   return (
     <section ref={ref} className="reveal py-20">
@@ -151,12 +159,15 @@ function WorkGallery({ title }: { title: string }) {
           {title}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {placeholders.map((n) => (
-            <ImagePlaceholder
-              key={n}
-              label={`Foto ${n}`}
-              className="aspect-square"
-            />
+          {images.map((n, i) => (
+            <div key={i} className="relative aspect-square overflow-hidden">
+              <Image
+                src={n}
+                alt={`Lavoro elettrico realizzato ${n}`}
+                fill
+                className="object-cover"
+              />
+            </div>
           ))}
         </div>
       </div>

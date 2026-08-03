@@ -82,13 +82,13 @@ export default function Footer() {
             Contatti
           </p>
           {/* Placeholder — swap in real phone/email once confirmed */}
-          <p className="text-sm text-paper/70">Telefono: da confermare</p>
-          <p className="text-sm text-paper/70">Email: da confermare</p>
+          <p className="text-sm text-paper/70">Telefono: (+39) 327 736 3410</p>
+          <p className="text-sm text-paper/70">Email: cinque.h5@gmail.com</p>
         </div>
       </div>
 
       <div className="border-t border-paper/10 py-6 text-center text-xs text-paper/50">
-        © {new Date().getFullYear()} 5H — Cinque H. Tutti i diritti riservati.
+        © {new Date().getFullYear()} 5H — Cinque H. Tutti i diritti riservati. P. IVA 05000290279
       </div>
     </footer>
   );
