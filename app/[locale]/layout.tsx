@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import LocalBusinessSchema from "../components/LocalBusinessSchema";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     "5H offre interventi elettrici, di carpenteria e tubisteria per il settore civile, navale e industriale a Venezia e provincia.",
-  metadataBase: new URL("https://www.cinqueh.it"), // update once domain is confirmed
+  metadataBase: new URL("https://www.cinqueh.com"), // update once domain is confirmed
   alternates: {
     canonical: "/",
   },
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
       <body>
+        <LocalBusinessSchema/>
         <NextIntlClientProvider messages={messages}>
           <Header />
             <main>{children}</main>
