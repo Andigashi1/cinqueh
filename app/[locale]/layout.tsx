@@ -9,6 +9,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import LocalBusinessSchema from "../components/LocalBusinessSchema";
 
+import { Analytics } from "@vercel/analytics/next";
+
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
@@ -61,10 +63,11 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
       <body>
-        <LocalBusinessSchema/>
         <NextIntlClientProvider messages={messages}>
           <Header />
-            <main>{children}</main>
+          <main>{children}</main>
+          <LocalBusinessSchema />
+          <Analytics />
           <Footer />
         </NextIntlClientProvider>
       </body>
