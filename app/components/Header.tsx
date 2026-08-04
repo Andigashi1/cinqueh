@@ -53,10 +53,10 @@ export default function Header() {
         <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 z-50">
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="5H — Cinque H"
-              width={64}
-              height={64}
+              width={48}
+              height={48}
               priority
             />
           </Link>

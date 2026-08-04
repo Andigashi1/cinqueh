@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto max-w-6xl px-6 py-16 grid gap-12 md:grid-cols-3 z-10">
         <div>
-          <Image src="/logo.png" alt="5H — Cinque H" width={48} height={48} />
+          <Image src="/logo.jpeg" alt="5H — Cinque H" width={48} height={48} />
           <p className="mt-4 text-sm text-paper/70 max-w-xs">
             Elettricisti, carpentieri e tubisti per il settore civile, navale e
             industriale.
