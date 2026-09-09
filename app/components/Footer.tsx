@@ -36,19 +36,19 @@ export default function Footer() {
 
   return (
     <footer
-      ref={footerRef}
-      id="contatti"
-      className="relative bg-ink text-paper overflow-hidden"
+       ref={footerRef}
+  id="contatti"
+  className="relative isolate overflow-hidden bg-ink text-paper"
     >
       <div
         key={pulseKey}
-        className="footer-pulse pointer-events-none absolute inset-0"
+        className="footer-pulse pointer-events-none absolute inset-0 z-0"
       />
-      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 pointer-events-none">
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-2/3">
 
         <p className="max-md:hidden text-7xl lg:text-[11rem] text-paper/3 font-display">CINQUE H</p>
       </div>
-      <div className="mx-auto max-w-6xl px-6 py-16 grid gap-12 md:grid-cols-3 z-10">
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-3">
         <div>
           <Image src="/logo.jpeg" alt="5H — Cinque H" width={48} height={48} />
           <p className="mt-4 text-sm text-paper/70 max-w-xs">
@@ -81,13 +81,12 @@ export default function Footer() {
           <p className="text-xs uppercase tracking-widest text-gold mb-4">
             Contatti
           </p>
-          {/* Placeholder — swap in real phone/email once confirmed */}
           <p className="text-sm text-paper/70">Telefono: (+39) 327 736 3410</p>
           <p className="text-sm text-paper/70">Email: cinque.h5@gmail.com</p>
         </div>
       </div>
 
-      <div className="border-t border-paper/10 py-6 text-center text-xs text-paper/50">
+      <div className="relative z-10 border-t border-paper/10 py-6 text-center text-xs text-paper/50">
         © {new Date().getFullYear()} 5H — Cinque H. Tutti i diritti riservati. P. IVA 05000290279
       </div>
     </footer>
