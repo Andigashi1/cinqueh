@@ -1,5 +1,21 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+The site describes 5H's services across Italy. Page copy is in `messages/it.json`; search metadata is in the page/layout files and service-area structured data is in `app/components/LocalBusinessSchema.tsx`.
+
+Browser checks target modern Chrome/Edge (Chromium), Firefox, and Safari (WebKit). The Next.js 16 and Tailwind 4 baseline is Chrome/Edge 111+, Firefox 128+, and Safari 16.4+; legacy browsers are outside this baseline.
+
+To run the production-site browser checks in PowerShell:
+
+```powershell
+npm install
+$env:PLAYWRIGHT_BROWSERS_PATH = Join-Path (Get-Location) '.playwright-browsers'
+npx playwright install chromium firefox webkit
+npm run build
+npm run test:e2e
+```
+
+The tests cover all four pages at 320, 390, 667, 768, and 1440 pixels, contact navigation, horizontal overflow, mobile keyboard navigation, resize scroll unlocking, reduced motion, and content visibility without JavaScript or IntersectionObserver. Browser binaries and test output are ignored by Git and ESLint. If Windows Application Control blocks a browser DLL, that browser must be checked on a machine whose policy permits it.
+
 ## Getting Started
 
 First, run the development server:

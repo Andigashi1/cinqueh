@@ -9,6 +9,10 @@ export function useReveal<T extends HTMLElement>() {
     const node = ref.current;
     if (!node) return;
 
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    node.classList.add("reveal-pending");
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -16,11 +20,14 @@ export function useReveal<T extends HTMLElement>() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0 }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      node.classList.remove("reveal-pending");
+    };
   }, []);
 
   return ref;

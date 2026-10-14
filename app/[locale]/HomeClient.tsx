@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-ink text-paper min-h-screen flex items-center overflow-hidden">
+      <section className="relative bg-ink text-paper hero-screen flex items-center overflow-hidden">
         <span
           aria-hidden
           className="absolute -right-20 -bottom-20 font-display text-[42rem] leading-none text-paper/3 select-none"
@@ -19,7 +19,7 @@ export default function Home() {
           5
         </span>
 
-        <div className="relative mx-auto max-w-6xl px-6 pt-20">
+        <div className="relative mx-auto max-w-6xl px-6 pt-28 pb-12">
           <p className="text-gold text-sm uppercase tracking-[0.2em] mb-6">
             {t("heroEyebrow")}
           </p>
@@ -99,7 +99,7 @@ function ServicesSection({ t }: { t: ReturnType<typeof useTranslations> }) {
           {t("servicesTitle")}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {items.map((item) => (
             <Link
               key={item.href}

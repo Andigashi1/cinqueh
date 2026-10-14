@@ -13,7 +13,7 @@ export default function Footer() {
   // First-time reveal: pulse once when the footer scrolls into view
   useEffect(() => {
     const node = footerRef.current;
-    if (!node) return;
+    if (!node || !("IntersectionObserver" in window)) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -53,7 +53,7 @@ export default function Footer() {
           <Image src="/logo.jpeg" alt="5H — Cinque H" width={48} height={48} />
           <p className="mt-4 text-sm text-paper/70 max-w-xs">
             Elettricisti, carpentieri e tubisti per il settore civile, navale e
-            industriale.
+            industriale in tutta Italia.
           </p>
         </div>
 
@@ -81,12 +81,12 @@ export default function Footer() {
           <p className="text-xs uppercase tracking-widest text-gold mb-4">
             Contatti
           </p>
-          <p className="text-sm text-paper/70">Telefono: (+39) 327 736 3410</p>
-          <p className="text-sm text-paper/70">Email: cinque.h5@gmail.com</p>
+          <p className="text-sm text-paper/70"><a href="tel:+393277363410" className="inline-block py-2 hover:text-gold">Telefono: (+39) 327 736 3410</a></p>
+          <p className="text-sm text-paper/70"><a href="mailto:cinque.h5@gmail.com" className="inline-block py-2 break-words hover:text-gold">Email: cinque.h5@gmail.com</a></p>
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-paper/10 py-6 text-center text-xs text-paper/50">
+      <div className="relative z-10 border-t border-paper/10 px-6 py-6 text-center text-xs text-paper/50">
         © {new Date().getFullYear()} 5H — Cinque H. Tutti i diritti riservati. P. IVA 05000290279
       </div>
     </footer>

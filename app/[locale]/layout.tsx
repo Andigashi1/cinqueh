@@ -25,11 +25,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "5H — Elettricisti, Carpentieri, Tubisti | Venezia",
+    default: "5H — Elettricisti, Carpentieri, Tubisti | Italia",
     template: "%s | 5H",
   },
   description:
-    "5H offre interventi elettrici, di carpenteria e tubisteria per il settore civile, navale e industriale a Venezia e provincia.",
+    "5H offre interventi elettrici, di carpenteria e tubisteria per il settore civile, navale e industriale in tutta Italia.",
   metadataBase: new URL("https://www.cinqueh.com"), // update once domain is confirmed
   alternates: {
     canonical: "/",

@@ -5,8 +5,8 @@ export default function LocalBusinessSchema() {
     name: "5H — Cinque H",
     url: "https://www.cinqueh.com",
     description:
-      "Elettricisti e carpentieri per il settore civile, navale e industriale a Venezia e provincia.",
-    areaServed: "Venezia e provincia",
+      "Elettricisti e carpentieri per il settore civile, navale e industriale in tutta Italia.",
+    areaServed: { "@type": "Country", name: "Italia" },
     // address: still pending the office — add once confirmed:
     // address: {
     //   "@type": "PostalAddress",

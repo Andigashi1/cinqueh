@@ -9,9 +9,9 @@
   "home": {
     "heroEyebrow": "Elettricisti · Carpentieri",
     "heroTitle": "Interventi tecnici per il settore civile, navale e industriale",
-    "heroSubtitle": "5H segue impianti elettrici e lavori di carpenteria per abitazioni, cantieri navali e stabilimenti industriali a Venezia e provincia.",
+    "heroSubtitle": "5H segue impianti elettrici e lavori di carpenteria per abitazioni, cantieri navali e stabilimenti industriali in tutta Italia.",
     "heroCta": "Richiedi un preventivo",
-    "trustLine": "Interventi elettrici e di carpenteria su navi da crociera e imbarcazioni presso i principali cantieri navali di Venezia.",
+    "trustLine": "Interventi elettrici e di carpenteria su navi da crociera e imbarcazioni presso cantieri navali in tutta Italia.",
     "servicesTitle": "I nostri servizi",
     "servicesSubtitle": "Competenze tecniche, un solo interlocutore.",
     "serviceElettricisti": "Impianti elettrici civili, industriali e navali: installazione, manutenzione e messa a norma.",
@@ -29,7 +29,7 @@
   "elettricisti": {
     "eyebrow": "Servizi",
     "title": "Elettricisti",
-    "subtitle": "Impianti elettrici civili, industriali e navali: dal cablaggio ai quadri elettrici, ovunque ce ne sia bisogno.",
+    "subtitle": "Impianti elettrici civili, industriali e navali: dal cablaggio ai quadri elettrici, in tutta Italia.",
     "leadTitle": "Un intervento elettrico, senza limiti di settore",
     "leadText": "Ci occupiamo di impianti elettrici in abitazioni, cantieri navali e stabilimenti industriali. Che si tratti di un nuovo impianto, di un quadro elettrico da aggiornare o di manutenzione ordinaria, seguiamo il lavoro dall'inizio alla fine.",
     "servicesTitle": "Cosa facciamo",
@@ -41,7 +41,7 @@
     ],
     "galleryTitle": "Lavori realizzati",
     "sectorsTitle": "Dove operiamo",
-    "sectorsText": "Lavoriamo ovunque ci sia bisogno di un intervento elettrico: dal contesto civile a quello navale e industriale.",
+    "sectorsText": "Operiamo in tutta Italia con interventi elettrici: dal contesto civile a quello navale e industriale.",
     "ctaTitle": "Hai bisogno di un elettricista?",
     "ctaText": "Contattaci per un sopralluogo o un preventivo.",
     "ctaButton": "Contattaci"
@@ -49,7 +49,7 @@
   "carpentieri": {
     "eyebrow": "Servizi",
     "title": "Carpentieri",
-    "subtitle": "Lavori di carpenteria civile, industriale e navale: allestimenti, strutture e interventi su misura.",
+    "subtitle": "Lavori di carpenteria civile, industriale e navale: allestimenti, strutture e interventi su misura in tutta Italia.",
     "leadTitle": "Carpenteria su misura, in ogni contesto",
     "leadText": "Realizziamo lavori di carpenteria per abitazioni, cantieri navali e stabilimenti industriali. Dagli allestimenti su misura alle strutture portanti, seguiamo ogni intervento con la stessa cura, indipendentemente dal settore.",
     "servicesTitle": "Cosa facciamo",
@@ -61,7 +61,7 @@
     ],
     "galleryTitle": "Lavori realizzati",
     "sectorsTitle": "Dove operiamo",
-    "sectorsText": "Lavoriamo ovunque ci sia bisogno di un intervento di carpenteria: dal contesto civile a quello navale e industriale.",
+    "sectorsText": "Operiamo in tutta Italia con lavori di carpenteria: dal contesto civile a quello navale e industriale.",
     "ctaTitle": "Hai bisogno di un carpentiere?",
     "ctaText": "Contattaci per un sopralluogo o un preventivo.",
     "ctaButton": "Contattaci"
@@ -69,7 +69,7 @@
   "chiSiamo": {
     "eyebrow": "Chi Siamo",
     "title": "Un team con esperienza reale",
-    "leadText": "5H nasce dall'esperienza diretta nel settore navale e industriale, maturata nel tempo attraverso il lavoro nei principali cantieri della zona. Oggi costruiamo un team di professionisti che condivide lo stesso standard: competenza tecnica e attenzione a ogni intervento, che si tratti di un'abitazione, un cantiere navale o uno stabilimento industriale.",
+    "leadText": "5H nasce dall'esperienza diretta nel settore navale e industriale, maturata nel tempo attraverso il lavoro nei cantieri navali e industriali. Oggi operiamo in tutta Italia con un team di professionisti che condivide lo stesso standard: competenza tecnica e attenzione a ogni intervento, che si tratti di un'abitazione, un cantiere navale o uno stabilimento industriale.",
     "valuesTitle": "Come lavoriamo",
     "values": [
       { "title": "Competenza", "desc": "Ogni intervento è seguito da professionisti con esperienza specifica nel settore." },

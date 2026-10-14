@@ -11,7 +11,7 @@
 
   /* Fonts */
   --font-display: var(--font-fraunces), serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: var(--font-inter), Arial, sans-serif;
 }
 
 html {
@@ -22,6 +22,24 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
+}
+
+.hero-screen {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+#contatti {
+  scroll-margin-top: 5rem;
 }
 
 /* Signature element: the split gold/black divider from the logo */
@@ -61,22 +79,27 @@ body {
 }
 
 /* Scroll reveal */
-.reveal {
+.reveal.reveal-pending {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.reveal.in-view {
+.reveal.reveal-pending.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .brand-divider span,
   .reveal,
   .footer-pulse {
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+    animation: none !important;
   }
 }
