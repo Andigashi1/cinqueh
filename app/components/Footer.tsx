@@ -1,93 +1,37 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { company } from "@/lib/company";
 
 export default function Footer() {
   const t = useTranslations("nav");
-  const footerRef = useRef<HTMLElement | null>(null);
-  const [pulseKey, setPulseKey] = useState(0);
-
-  // First-time reveal: pulse once when the footer scrolls into view
-  useEffect(() => {
-    const node = footerRef.current;
-    if (!node || !("IntersectionObserver" in window)) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setPulseKey((k) => k + 1);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.15 },
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  // Every CTA click, anywhere on the page, regardless of scroll state
-  useEffect(() => {
-    const handler = () => setPulseKey((k) => k + 1);
-    window.addEventListener("cta-contatti-click", handler);
-    return () => window.removeEventListener("cta-contatti-click", handler);
-  }, []);
-
+  const common = useTranslations("common");
+  const footer = useTranslations("footer");
   return (
-    <footer
-       ref={footerRef}
-  id="contatti"
-  className="relative isolate overflow-hidden bg-ink text-paper"
-    >
-      <div
-        key={pulseKey}
-        className="footer-pulse pointer-events-none absolute inset-0 z-0"
-      />
-      <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-2/3">
-
-        <p className="max-md:hidden text-7xl lg:text-[11rem] text-paper/3 font-display">CINQUE H</p>
-      </div>
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-3">
-        <div>
-          <Image src="/logo.jpeg" alt="5H — Cinque H" width={48} height={48} />
-          <p className="mt-4 text-sm text-paper/70 max-w-xs">
-            Elettricisti, carpentieri e tubisti per il settore civile, navale e
-            industriale in tutta Italia.
-          </p>
+    <footer className="site-footer on-dark">
+      <div className="site-container">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Image src="/logo.jpeg" alt="5H — Cinque H" width={64} height={64} />
+            <p>{footer("description")}</p>
+          </div>
+          <div>
+            <p className="footer-label">{common("services")}</p>
+            <nav className="flex flex-col items-start" aria-label={common("services")}>
+              <Link href="/elettricisti">{t("elettricisti")}</Link>
+              <Link href="/carpentieri">{t("carpentieri")}</Link>
+            </nav>
+          </div>
+          <div>
+            <p className="footer-label">{t("contatti")}</p>
+            <p><a href={company.phoneHref}>{common("phone")}: {company.phone}</a></p>
+            <p><a href={`mailto:${company.email}`}>{common("email")}: {company.email}</a></p>
+          </div>
         </div>
-
-        <div>
-          <p className="text-xs uppercase tracking-widest text-gold mb-4">
-            Servizi
-          </p>
-          <nav className="flex flex-col gap-2 text-sm">
-            <Link
-              href="/elettricisti"
-              className="hover:text-gold transition-colors"
-            >
-              {t("elettricisti")}
-            </Link>
-            <Link
-              href="/carpentieri"
-              className="hover:text-gold transition-colors"
-            >
-              {t("carpentieri")}
-            </Link>
-          </nav>
+        <div className="footer-legal">
+          <p>© {new Date().getFullYear()} {common("copyright")}</p>
+          <p>{common("vat")} {company.vat}</p>
         </div>
-
-        <div>
-          <p className="text-xs uppercase tracking-widest text-gold mb-4">
-            Contatti
-          </p>
-          <p className="text-sm text-paper/70"><a href="tel:+393277363410" className="inline-block py-2 hover:text-gold">Telefono: (+39) 327 736 3410</a></p>
-          <p className="text-sm text-paper/70"><a href="mailto:cinque.h5@gmail.com" className="inline-block py-2 break-words hover:text-gold">Email: cinque.h5@gmail.com</a></p>
-        </div>
-      </div>
-
-      <div className="relative z-10 border-t border-paper/10 px-6 py-6 text-center text-xs text-paper/50">
-        © {new Date().getFullYear()} 5H — Cinque H. Tutti i diritti riservati. P. IVA 05000290279
       </div>
     </footer>
   );

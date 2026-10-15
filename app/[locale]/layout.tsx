@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Fraunces, Inter } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContactSection from "../components/ContactSection";
 import LocalBusinessSchema from "../components/LocalBusinessSchema";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -59,13 +60,15 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const common = await getTranslations("common");
 
   return (
     <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <a href="#main-content" className="skip-link">{common("skipLink")}</a>
           <Header />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}<ContactSection /></main>
           <LocalBusinessSchema />
           <Analytics />
           <Footer />

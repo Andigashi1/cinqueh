@@ -7,6 +7,8 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+    // Vendored agent resources use their upstream code conventions.
+    ".agents/skills/**",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",

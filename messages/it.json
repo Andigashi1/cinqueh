@@ -4,7 +4,11 @@
     "chiSiamo": "Chi Siamo",
     "elettricisti": "Elettricisti",
     "carpentieri": "Carpentieri",
-    "contatti": "Contatti"
+    "contatti": "Contatti",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "mobileNavigation": "Navigazione mobile",
+    "mainNavigation": "Navigazione principale"
   },
   "home": {
     "heroEyebrow": "Elettricisti · Carpentieri",
@@ -24,7 +28,13 @@
     "aboutCta": "Scopri chi siamo",
     "contactTitle": "Parliamo del tuo progetto",
     "contactSubtitle": "Contattaci per un sopralluogo o un preventivo.",
-    "contactCta": "Contattaci"
+    "contactCta": "Contattaci",
+    "heroImageAlt": "Cablaggi e componenti all’interno di un quadro elettrico",
+    "heroCaption": "Cablaggi e quadri elettrici",
+    "workTitle": "Il lavoro, da vicino.",
+    "workIntro": "Una selezione delle immagini dei nostri interventi.",
+    "aboutTitle": "Un team con esperienza reale",
+    "aboutImageAlt": "Operatore al lavoro su una piattaforma in galleria"
   },
   "elettricisti": {
     "eyebrow": "Servizi",
@@ -34,10 +44,22 @@
     "leadText": "Ci occupiamo di impianti elettrici in abitazioni, cantieri navali e stabilimenti industriali. Che si tratti di un nuovo impianto, di un quadro elettrico da aggiornare o di manutenzione ordinaria, seguiamo il lavoro dall'inizio alla fine.",
     "servicesTitle": "Cosa facciamo",
     "services": [
-      { "title": "Impianti elettrici civili", "desc": "Cablaggio, punti luce, prese e quadri per abitazioni e uffici." },
-      { "title": "Quadri elettrici", "desc": "Installazione, aggiornamento e messa a norma di quadri elettrici." },
-      { "title": "Manutenzione", "desc": "Interventi di manutenzione ordinaria e straordinaria su impianti esistenti." },
-      { "title": "Interventi navali e industriali", "desc": "Impianti elettrici per imbarcazioni, cantieri navali e stabilimenti industriali." }
+      {
+        "title": "Impianti elettrici civili",
+        "desc": "Cablaggio, punti luce, prese e quadri per abitazioni e uffici."
+      },
+      {
+        "title": "Quadri elettrici",
+        "desc": "Installazione, aggiornamento e messa a norma di quadri elettrici."
+      },
+      {
+        "title": "Manutenzione",
+        "desc": "Interventi di manutenzione ordinaria e straordinaria su impianti esistenti."
+      },
+      {
+        "title": "Interventi navali e industriali",
+        "desc": "Impianti elettrici per imbarcazioni, cantieri navali e stabilimenti industriali."
+      }
     ],
     "galleryTitle": "Lavori realizzati",
     "sectorsTitle": "Dove operiamo",
@@ -54,10 +76,22 @@
     "leadText": "Realizziamo lavori di carpenteria per abitazioni, cantieri navali e stabilimenti industriali. Dagli allestimenti su misura alle strutture portanti, seguiamo ogni intervento con la stessa cura, indipendentemente dal settore.",
     "servicesTitle": "Cosa facciamo",
     "services": [
-      { "title": "Carpenteria civile", "desc": "Strutture, fissaggi e allestimenti su misura per abitazioni e uffici." },
-      { "title": "Carpenteria industriale", "desc": "Strutture portanti, scaffalature e casse per il settore industriale." },
-      { "title": "Allestimenti navali", "desc": "Interni, arredi e allestimenti su misura per imbarcazioni e navi da crociera." },
-      { "title": "Interventi su misura", "desc": "Lavori di carpenteria personalizzati in base alle esigenze del cliente." }
+      {
+        "title": "Carpenteria civile",
+        "desc": "Strutture, fissaggi e allestimenti su misura per abitazioni e uffici."
+      },
+      {
+        "title": "Carpenteria industriale",
+        "desc": "Strutture portanti, scaffalature e casse per il settore industriale."
+      },
+      {
+        "title": "Allestimenti navali",
+        "desc": "Interni, arredi e allestimenti su misura per imbarcazioni e navi da crociera."
+      },
+      {
+        "title": "Interventi su misura",
+        "desc": "Lavori di carpenteria personalizzati in base alle esigenze del cliente."
+      }
     ],
     "galleryTitle": "Lavori realizzati",
     "sectorsTitle": "Dove operiamo",
@@ -72,12 +106,99 @@
     "leadText": "5H nasce dall'esperienza diretta nel settore navale e industriale, maturata nel tempo attraverso il lavoro nei cantieri navali e industriali. Oggi operiamo in tutta Italia con un team di professionisti che condivide lo stesso standard: competenza tecnica e attenzione a ogni intervento, che si tratti di un'abitazione, un cantiere navale o uno stabilimento industriale.",
     "valuesTitle": "Come lavoriamo",
     "values": [
-      { "title": "Competenza", "desc": "Ogni intervento è seguito da professionisti con esperienza specifica nel settore." },
-      { "title": "Versatilità", "desc": "Lavoriamo nel settore civile, navale e industriale, senza compromessi sulla qualità." },
-      { "title": "Serietà", "desc": "Rispetto dei tempi e degli accordi presi con ogni cliente." }
+      {
+        "title": "Competenza",
+        "desc": "Ogni intervento è seguito da professionisti con esperienza specifica nel settore."
+      },
+      {
+        "title": "Versatilità",
+        "desc": "Lavoriamo nel settore civile, navale e industriale, senza compromessi sulla qualità."
+      },
+      {
+        "title": "Serietà",
+        "desc": "Rispetto dei tempi e degli accordi presi con ogni cliente."
+      }
     ],
     "ctaTitle": "Vuoi saperne di più sul nostro lavoro?",
     "ctaText": "Contattaci per parlare del tuo progetto.",
     "ctaButton": "Contattaci"
+  },
+  "common": {
+    "skipLink": "Vai al contenuto",
+    "services": "Servizi",
+    "learnMore": "Scopri di più",
+    "viewServices": "Esplora i servizi",
+    "viewElectrical": "Scopri gli interventi elettrici",
+    "viewCarpentry": "Scopri la carpenteria",
+    "galleryHint": "Seleziona una foto per osservarne i dettagli.",
+    "openImage": "Ingrandisci: {description}",
+    "closeViewer": "Chiudi foto",
+    "previousImage": "Precedente",
+    "nextImage": "Successiva",
+    "imageCount": "Foto {current} di {total}",
+    "galleryLabel": "Galleria fotografica",
+    "phone": "Telefono",
+    "email": "Email",
+    "vat": "P. IVA",
+    "copyright": "5H — Cinque H. Tutti i diritti riservati."
+  },
+  "images": {
+    "electricalHero": "Quadri elettrici aperti con cablaggi e apparecchiature di controllo",
+    "electrical1": "Cablaggi e componenti all’interno di un quadro elettrico",
+    "electrical2": "Struttura e connessioni di un armadio elettrico",
+    "electrical3": "Cavi e moduli di un quadro elettrico",
+    "electrical4": "Morsettiere e collegamenti di un impianto elettrico",
+    "carpentry1": "Operatori su una piattaforma elevatrice in galleria",
+    "carpentry2": "Piattaforma di lavoro all’interno di una galleria",
+    "carpentry3": "Strutture e attrezzature in un cantiere in galleria",
+    "carpentry4": "Mezzi e piattaforme di lavoro in galleria",
+    "carpentry5": "Operatore su una piattaforma accanto alla parete di una galleria",
+    "aboutHero": "Operatori con caschi e abiti da lavoro"
+  },
+  "contact": {
+    "title": "Parliamo del tuo progetto",
+    "intro": "Contattaci per un sopralluogo o un preventivo.",
+    "formTitle": "Raccontaci di cosa hai bisogno.",
+    "previewNotice": "Compila e rivedi la richiesta, poi conferma l’invio a 5H.",
+    "requiredNote": "Tutti i campi sono obbligatori.",
+    "name": "Nome o azienda",
+    "email": "Indirizzo email",
+    "service": "Servizio",
+    "location": "Località e paese del progetto",
+    "description": "Descrizione del progetto",
+    "chooseService": "Seleziona un servizio",
+    "electrical": "Interventi elettrici",
+    "carpentry": "Carpenteria",
+    "both": "Elettricità e carpenteria",
+    "advice": "Vorrei un consiglio",
+    "review": "Rivedi la richiesta",
+    "reviewTitle": "La tua richiesta, da rivedere",
+    "reviewNotice": "La richiesta non è stata inviata. Controlla i dati e conferma l’invio qui sotto.",
+    "reviewReady": "Riepilogo pronto. La richiesta non è stata inviata.",
+    "copy": "Copia il testo della richiesta",
+    "copied": "Testo copiato. Puoi incollarlo nella tua email.",
+    "copyFailed": "La copia non è disponibile. Puoi selezionare il testo nel riepilogo.",
+    "invalidSummary": "Controlla i campi indicati prima di rivedere la richiesta.",
+    "nameError": "Inserisci il tuo nome o quello dell’azienda.",
+    "emailError": "Inserisci un indirizzo email valido.",
+    "serviceError": "Seleziona il servizio di cui hai bisogno.",
+    "locationError": "Indica la località e il paese del progetto.",
+    "descriptionError": "Descrivi brevemente il progetto.",
+    "namePlaceholder": "Es. Mario Rossi o nome dell’azienda…",
+    "locationPlaceholder": "Es. Milano, Italia…",
+    "descriptionPlaceholder": "Tipo di intervento, contesto e necessità del progetto…",
+    "noScript": "Puoi contattarci direttamente via email o telefono. L’invio del modulo richiede JavaScript.",
+    "send": "Invia la richiesta",
+    "sending": "Invio in corso…",
+    "sent": "Richiesta inviata. Grazie per averci contattato.",
+    "sentButton": "Richiesta inviata",
+    "sendFailed": "Non è stato possibile confermare l’invio. Riprova oppure contattaci via email o telefono.",
+    "sendUnavailable": "Il modulo non è al momento disponibile. Contattaci via email o telefono.",
+    "sendLimited": "Hai effettuato diversi tentativi. Attendi qualche minuto oppure contattaci via email o telefono.",
+    "newRequest": "Nuova richiesta",
+    "leaveBlank": "Lascia vuoto questo campo"
+  },
+  "footer": {
+    "description": "Elettricisti, carpentieri e tubisti per il settore civile, navale e industriale in tutta Italia."
   }
 }

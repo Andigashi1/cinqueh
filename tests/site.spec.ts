@@ -32,7 +32,7 @@ for (const viewport of sizes) {
         await page.locator("header").getByRole("link", { name: "Contatti", exact: true }).click();
       }
       await expect(page.locator("#contatti")).toBeInViewport();
-      await expect(page.locator('a[href="tel:+393277363410"]')).toBeVisible();
+      await expect(page.locator('#contatti a[href="tel:+393277363410"]')).toBeVisible();
       for (const section of await page.locator(".reveal").all()) {
         await section.scrollIntoViewIfNeeded();
         await expect(section).toHaveCSS("opacity", "1");
@@ -92,4 +92,53 @@ test("reduced motion keeps content visible and disables smooth scrolling", async
   for (const section of await page.locator(".reveal").all()) {
     await expect(section).toHaveCSS("opacity", "1");
   }
+});
+
+test("inquiry validates, reviews locally, and invalidates a stale summary", async ({ page }) => {
+  const transmitted: string[] = [];
+  page.on("request", (request) => {
+    if (request.postData()?.includes("inquiry-check@example.com")) transmitted.push(request.url());
+  });
+  await page.goto("/");
+  const contact = page.locator("#contatti");
+  await contact.getByRole("button", { name: "Rivedi la richiesta", exact: true }).click();
+  await expect(page.getByLabel("Nome o azienda")).toBeFocused();
+  await expect(contact.locator('[aria-invalid="true"]')).toHaveCount(5);
+  await page.getByLabel("Nome o azienda").fill("Verifica 5H");
+  await page.getByLabel("Indirizzo email").fill("invalid");
+  await page.getByLabel("Servizio", { exact: true }).selectOption("both");
+  await page.getByLabel("Località e paese del progetto").fill("Lione, Francia");
+  await page.getByLabel("Descrizione del progetto").fill("Verifica locale del modulo di richiesta.");
+  await contact.getByRole("button", { name: "Rivedi la richiesta", exact: true }).click();
+  await expect(page.getByLabel("Indirizzo email")).toBeFocused();
+  await page.getByLabel("Indirizzo email").fill("inquiry-check@example.com");
+  await contact.getByRole("button", { name: "Rivedi la richiesta", exact: true }).click();
+  await expect(contact.getByRole("heading", { name: "La tua richiesta, da rivedere" })).toBeFocused();
+  await expect(contact.locator(".form-review")).toContainText("Lione, Francia");
+  await expect(contact.locator(".form-review")).toContainText("La richiesta non è stata inviata.");
+  await expect(contact.locator('[aria-invalid="true"]')).toHaveCount(0);
+  expect(transmitted).toEqual([]);
+  await page.getByLabel("Nome o azienda").fill("Nome aggiornato");
+  await expect(contact.locator(".form-review")).toHaveCount(0);
+  await expect(page.getByLabel("Indirizzo email")).toHaveValue("inquiry-check@example.com");
+});
+
+test("work viewer supports navigation, Escape, and focus restoration", async ({ page }) => {
+  await page.goto("/elettricisti");
+  const opener = page.getByRole("button", { name: /^Ingrandisci:/ }).first();
+  await opener.click();
+  const viewer = page.getByRole("dialog", { name: "Galleria fotografica" });
+  await expect(viewer).toBeVisible();
+  await expect(viewer).toContainText("Foto 1 di 4");
+  await expect(page.locator("body")).toHaveCSS("overflow", "hidden");
+  await page.keyboard.press("ArrowRight");
+  await expect(viewer).toContainText("Foto 2 di 4");
+  await page.keyboard.press("ArrowLeft");
+  await expect(viewer).toContainText("Foto 1 di 4");
+  await viewer.getByRole("button", { name: "Successiva" }).click();
+  await expect(viewer).toContainText("Foto 2 di 4");
+  await page.keyboard.press("Escape");
+  await expect(viewer).not.toBeVisible();
+  await expect(opener).toBeFocused();
+  await expect(page.locator("body")).not.toHaveCSS("overflow", "hidden");
 });
