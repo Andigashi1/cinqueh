@@ -21,6 +21,7 @@ After deployment, submit one clearly marked test inquiry through the live site. 
 - Native Next.js Server Action origin checks; no new public mail API route.
 - Hidden honeypot, disabled controls during sending, provider timeout, and payload-bound Resend idempotency key reused for retries (provider retention: 24 hours).
 - Best-effort in-memory throttling: three attempts per email and ten per Vercel-provided client IP within ten minutes. State is bounded to 1,000 hashed identities per server instance and resets on cold starts. This is basic protection, not a distributed or durable quota; stronger protection can be added if actual abuse warrants it.
+- Successful requests reset all fields and remove the review summary while retaining the success message. The form remains available for a fresh inquiry; editing starts a new request.
 - Provider failures keep the reviewed details and allow retry. No credentials, request contents or provider response bodies are logged or returned to the browser.
 - Without JavaScript, direct email and phone remain available.
 

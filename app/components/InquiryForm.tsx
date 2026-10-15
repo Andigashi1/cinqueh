@@ -52,7 +52,7 @@ export default function InquiryForm() {
 
   function reviewRequest(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (isPending || sent) return;
+    if (isPending) return;
     const values = readInquiry(event.currentTarget);
     const next = validate(values);
     setErrors(next);
@@ -81,6 +81,10 @@ export default function InquiryForm() {
       try {
         const result = await sendInquiry(data);
         if (result.status === "sent") {
+          formRef.current?.reset();
+          requestId.current = null;
+          setReview(null);
+          setErrors({});
           setSent(true);
           setStatus(t("sent"));
         } else if (result.status === "invalid") {
@@ -99,16 +103,6 @@ export default function InquiryForm() {
         sending.current = false;
       }
     });
-  }
-
-  function newRequest() {
-    formRef.current?.reset();
-    requestId.current = null;
-    focusField.current = "name";
-    setSent(false);
-    setReview(null);
-    setErrors({});
-    setStatus("");
   }
 
   async function copyRequest() {
@@ -137,8 +131,9 @@ export default function InquiryForm() {
     <form ref={formRef} className="inquiry-form" noValidate onSubmit={reviewRequest}
       aria-labelledby="inquiry-title" aria-describedby="inquiry-note inquiry-required"
       onChange={(event) => {
-        if (isPending || sent) return;
+        if (isPending) return;
         requestId.current = null;
+        if (sent) setSent(false);
         if (review) setReview(null);
         if (status) setStatus("");
         const target = event.nativeEvent.target;
@@ -161,7 +156,7 @@ export default function InquiryForm() {
           <label htmlFor="inquiry-website">{t("leaveBlank")}</label>
           <input id="inquiry-website" name="website" tabIndex={-1} autoComplete="off" />
         </div>
-        <fieldset disabled={isPending || sent} className="contents">
+        <fieldset disabled={isPending} className="contents">
         <div className="form-fields">
           <div className="form-field form-field--wide">
             <label htmlFor="inquiry-name">{t("name")}</label>
@@ -198,13 +193,12 @@ export default function InquiryForm() {
         {review && (
           <section className="form-review" aria-labelledby="inquiry-review-title">
             <h4 id="inquiry-review-title" ref={reviewRef} tabIndex={-1}>{t("reviewTitle")}</h4>
-            {!sent && <p className="form-note mt-3">{t("reviewNotice")}</p>}
+            <p className="form-note mt-3">{t("reviewNotice")}</p>
             <dl>
               {fieldNames.map((field) => <div key={field}><dt>{t(field)}</dt><dd>{field === "service" ? t(review.service) : review[field]}</dd></div>)}
             </dl>
             <div className="flex flex-wrap gap-3">
-              {sent ? <button type="button" className="button" onClick={newRequest}>{t("newRequest")}</button> :
-                <button type="button" className="button" disabled={isPending} onClick={submitRequest}>{t(isPending ? "sending" : "send")}<ArrowIcon /></button>}
+              <button type="button" className="button" disabled={isPending} onClick={submitRequest}>{t(isPending ? "sending" : "send")}<ArrowIcon /></button>
               <button type="button" className="button button--outline" disabled={isPending} onClick={copyRequest}>{t("copy")}</button>
             </div>
           </section>

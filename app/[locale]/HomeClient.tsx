@@ -32,7 +32,12 @@ export default function Home() {
               <p className="hero-subtitle">{t("heroSubtitle")}</p>
               <div className="hero-actions">
                 <a href="#contatti" className="button">{t("heroCta")}<ArrowIcon /></a>
-                <a href="#servizi" className="text-link">{common("viewServices")}</a>
+                <a href="#servizi" className="text-link scroll-cue">
+                  {common("viewServices")}
+                  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 4v15m-6-6 6 6 6-6" />
+                  </svg>
+                </a>
               </div>
             </div>
             <figure className="hero-visual">
