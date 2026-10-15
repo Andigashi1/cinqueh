@@ -42,3 +42,29 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local agent tools and instructions
+/.agents/
+/.codex/
+/.claude/
+AGENTS.md
+CLAUDE.md
+/skills-lock.json
+
+# local design notes and reports
+/design-plans/
+
+# local editor settings and caches
+/.idea/
+/.vscode/
+/.cache/
+__pycache__/
+*.py[cod]
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+
+# local backups and exported patches
+/*.bundle
+/*.patch
