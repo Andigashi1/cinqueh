@@ -6,8 +6,8 @@ export const company = {
   vat: "05000290279",
 };
 
-/** Configuration placeholders: add only verified official profile URLs. */
+/** Official social media profiles supplied by the owner. */
 export const socialProfiles: { facebook: string | null; instagram: string | null } = {
-  facebook: null,
-  instagram: null,
+  facebook: "https://www.facebook.com/profile.php?id=61592451763237",
+  instagram: "https://www.instagram.com/cinque5pushh/",
 };

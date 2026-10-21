@@ -18,14 +18,18 @@ export default function ContactSection() {
             <div><span>{common("email")}</span><a href={`mailto:${company.email}`}>{company.email}<ArrowIcon diagonal /></a></div>
             <div><span>{common("phone")}</span><a href={company.phoneHref}>{company.phone}</a></div>
           </address>
-          {profiles.length > 0 && <div className="social-links">
+          {profiles.length > 0 && <div className="contact-social">
+            <h3>{t("socialTitle")}</h3>
+            <div className="social-links">
             {profiles.map(([name, url]) => <a key={name} href={url} aria-label={name === "facebook" ? "Facebook" : "Instagram"} target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
                 {name === "facebook"
                   ? <path d="M13.7 22v-9.1h3.1l.5-3.6h-3.6V7c0-1 .3-1.8 1.8-1.8h1.9V2.1a25 25 0 0 0-2.8-.1c-2.8 0-4.7 1.7-4.7 4.8v2.5H7v3.6h2.9V22z" />
                   : <><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" /><circle cx="17.5" cy="6.5" r="1" /></>}
               </svg>
+              <span>{name === "facebook" ? "Facebook" : "Instagram"}</span>
             </a>)}
+            </div>
           </div>}
         </div>
         <InquiryForm />

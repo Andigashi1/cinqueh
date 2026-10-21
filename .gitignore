@@ -50,6 +50,9 @@ next-env.d.ts
 AGENTS.md
 CLAUDE.md
 /skills-lock.json
+/.superdesign/
+skills/
+SKILL.md
 
 # local design notes and reports
 /design-plans/
